@@ -3,10 +3,10 @@
 //3.metodos
 //4.eventos
 
-import { generos } from "../generos.js";
-import { gustos } from "../gustos.js";
-import { ciudades } from "../ciudades.js";
-import  is_valid  from "../validando_formulario.js"
+import { generos } from "./generos.js";
+import { gustos } from "./gustos.js";
+import { ciudades } from "./ciudades.js";
+import  is_valid  from "./validando_formulario.js"
 
 
 //capturamos los elementos

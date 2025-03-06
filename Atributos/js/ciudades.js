@@ -1,6 +1,6 @@
 export const ciudades = async (formulario) => {
     try {
-        const data = await fetch('data.json');
+        const data = await fetch('../json/data.json');
         const ciudades = await data.json();
         const combo = document.createElement('select');
         combo.name = "ciudad_id";

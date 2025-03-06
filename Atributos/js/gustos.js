@@ -1,5 +1,5 @@
 export const gustos = async (formulario) => {
-    const data = await fetch('gustos.json');
+    const data = await fetch('../json/gustos.json');
     const generos = await data.json();
 
     //creamos los elementos

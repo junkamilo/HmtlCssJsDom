@@ -1,6 +1,6 @@
 export const generos = async (formulario) => {
     try {
-        const data = await fetch('generos.json');
+        const data = await fetch('../json/generos.json');
     const generos = await data.json();
 
     //creamos los elementos

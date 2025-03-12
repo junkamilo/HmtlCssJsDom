@@ -1,16 +1,46 @@
 const dom = document;
 const is_valid = (event , formulario) => {
     event.preventDefault();
-    const lista = dom.querySelectorAll(formulario);
-    console.log(lista[0].selectedIndex);
-    
-    console.log(lista[0].selectedIndex == 0);
-    if (lista[0].selectedIndex == 0) {
-        lista[0].classList.toggle("error");
+    const lista = dom.querySelector(formulario);
+    console.log(lista.children);
+    for (const child of lista.children) {
+        if (child.tagName == "SELECT") {
+            console.log(child.tagName == "SELECT");
+            //console.log(child.tagName);
+            //console.log(child.attributes);
+            for (const name of child.getAttributeNames()) {
+                const value = child.dataset.required;
+                if (name === "data-required" && value === "true") {
+                    //console.log(name , value, child);
+                    if (child.selectedIndex == 0) {
+                        child.classList.add("error");
+                    }else{
+                        child.classList.remove("error");
+                    }
+                    
+                }
+            }
+        }if (child.tagName == "INPUT") {
+            child.setAttribute("data-required" , "true");
+            //console.log(child.tagName == "INPUT");
+            //console.log(child.tagName);
+            //console.log(child.attributes);
+            for (const name of child.getAttributeNames()) {
+                const value = child.dataset.required;
+                if (name === "data-required" && value === "true") {
+                    //console.log(name , value, child);
+                    if (child.selectedIndex == 0) {
+                        child.classList.add("error");
+                    }else{
+                        child.classList.remove("error");
+                    }
+                    
+                }
+            }
+        }
+        
     }
-    
     let bandera = true;
     return bandera;
-    
 }
 export default is_valid;

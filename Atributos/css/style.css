@@ -205,3 +205,6 @@ button:hover {
   background: var(--heavyMetal);
   color: var(--starship);
 }
+.error{
+  border: 1px solid red;
+}

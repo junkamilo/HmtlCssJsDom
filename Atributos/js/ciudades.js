@@ -6,6 +6,7 @@ export const ciudades = async (formulario) => {
         combo.name = "ciudad_id";
         combo.id = "ciudad_id";
         const defecto = document.createElement('option');
+        combo.setAttribute("data-required" , true);
         defecto.textContent = "Selecione ciudad...";
         combo.append(defecto);
         const opciones = document.createDocumentFragment();

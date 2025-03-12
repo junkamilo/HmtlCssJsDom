@@ -56,8 +56,8 @@ btn.insertAdjacentElement("beforebegin", terminos);
 // }
 
 const validando_formulario = (event) =>{
-    let a = is_valid(event , 'form [required]');
-    console.log(a);
+    let a = is_valid(event , 'form');
+    //console.log(a);
     
 };
 const submit = () => {
